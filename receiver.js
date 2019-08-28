@@ -1,7 +1,7 @@
 'use strict';
 var client = null;
 var Stomp = require('stomp-client');
-const amq_host = process.env['amq_host']? process.env['amq_host'] :'messaging-wss-iau1o14eqf-enmasse.apps.internal-4140.open.redhat.com';
+const amq_host = process.env['amq_host']? process.env['amq_host'] :'redacted';
 const amq_port = process.env['amq_port']? process.env['amq_port'] : 443
 
 
