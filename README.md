@@ -1,6 +1,8 @@
-docker run -it --rm \
-  -p 8161:8161 \
-  -p 61616:61616 \
-  -p 5672:5672 \
-  vromero/activemq-artemis
+to run the app
+using node v10.15.1
+run:
+
+npm install
+
+npm start
 
