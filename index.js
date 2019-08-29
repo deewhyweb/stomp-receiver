@@ -6,11 +6,11 @@ function onStompInit(err) {
     console.error(err);
   } else {
     if (inited === true) {
-      return cb();
+      console.log('Already subscribed');
     }
     inited = true;
-    stompClient.subscribe("/queue/examples", onMessage);
-    cb();
+    stompClient.subscribe("examples", onMessage);
+    console.log('Subscribed');
   }
 }
 

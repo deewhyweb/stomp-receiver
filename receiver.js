@@ -1,9 +1,10 @@
 'use strict';
 var client = null;
 var Stomp = require('stomp-client');
-const amq_host = process.env['amq_host']? process.env['amq_host'] :'redacted';
-const amq_port = process.env['amq_port']? process.env['amq_port'] : 443
-
+const amq_host = process.env['amq_host']? process.env['amq_host'] :'127.0.0.1';
+const amq_port = process.env['amq_port']? process.env['amq_port'] : 61616 
+const username = process.env['username']? process.env['amq_host'] :'artemis';
+const password = process.env['password']? process.env['password'] : 'simetraehcapa'
 
 
 function AMQService() {}
@@ -14,7 +15,7 @@ AMQService.prototype.init = function(cb) {
   if (client === null) {
    
     console.log('Start to initialise AMQService');
-    client = new Stomp(amq_host, amq_port, 'testUser', 'Password1',"1.0", null, {});
+    client = new Stomp(amq_host, amq_port, username, password,"1.0", null, {});
     
     client.connect(function(/* sessionId */) {
         console.log('Connected to: %s : %s', amq_host, amq_port);
