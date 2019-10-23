@@ -6,3 +6,4 @@ npm install
 
 npm start
 
+node rhea-test.js amqps://<<route-without-wss> myqueue

@@ -1,8 +1,8 @@
 'use strict';
 var client = null;
 var Stomp = require('stomp-client');
-const amq_host = process.env['amq_host']? process.env['amq_host'] :'127.0.0.1';
-const amq_port = process.env['amq_port']? process.env['amq_port'] : 61616 
+const amq_host = process.env['amq_host']? process.env['amq_host'] :'messaging-wss-e960xjutbe-openshift-enmasse.e785.tke-2.openshiftapps.com';
+const amq_port = process.env['amq_port']? process.env['amq_port'] : 443 
 const username = process.env['username']? process.env['amq_host'] :'artemis';
 const password = process.env['password']? process.env['password'] : 'simetraehcapa'
 

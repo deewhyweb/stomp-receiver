@@ -9,7 +9,7 @@ function onStompInit(err) {
       console.log('Already subscribed');
     }
     inited = true;
-    stompClient.subscribe("examples", onMessage);
+    stompClient.subscribe("test-queue", onMessage);
     console.log('Subscribed');
   }
 }
